@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">IMC</string>
-    <string name="titulo_calculadora_imc">Calculadora IMC</string>
-    <string name="label_peso">Peso (Kg)</string>
-    <string name="label_altura">Altura (m)</string>
-    <string name="label_calcular">Calcular</string>
+    <string name="titulo_calculadora_imc">IMC Calculator</string>
+    <string name="label_peso">Weight (Kg)</string>
+    <string name="label_altura">Hight (m)</string>
+    <string name="label_calcular">Calculate</string>
+
+    <string name="magreza">Under weight</string>
+    <string name="peso_normal">Regular weight</string>
+    <string name="sobre_peso">You are overweight</string>
+    <string name="obesidade_grau_i">You are with obesity degree I</string>
+    <string name="obesidade_grau_ii">You are with obesity degree II</string>
+    <string name="obesidade_grau_iii">You are with obesity degree III</string>
+    <string name="seu_imc">Your IMC é: %1$s</string>
+
 </resources>
