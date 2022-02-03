@@ -16,6 +16,12 @@ class PlayerActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        setUpListener()
+
+    }
+
+    private fun setUpListener() {
+
         binding.btnStart.setOnClickListener {
             val nextScreen = Intent(this, MainActivity::class.java)
 
