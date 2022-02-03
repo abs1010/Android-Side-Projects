@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ping Pong X</string>
+    <string name="ponto">PONTO</string>
+    <string name="terminar_a_partida">TERMINAR A PARTIDA</string>
+    <string name="revanche">REVANCHE</string>
+    <string name="ping_pong_x">Ping Pong X</string>
+    <string name="casa">CASA</string>
+    <string name="visitante">VISITANTE</string>
+</resources>
