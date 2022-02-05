@@ -6,6 +6,8 @@ import android.inputmethodservice.Keyboard
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.alansilva.pingpongx.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,13 +18,7 @@ class MainActivity : AppCompatActivity() {
     private var playerOneScore = 0
     private var playerTwoScore = 0
 
-    private val PLAYER1_SCORE = "KEY_PLAYER1_SCORE"
-    private val PLAYER2_SCORE = "KEY_PLAYER2_SCORE"
-
-    companion object {
-        const val KEY_PLAYER1_EXTRA = "PLAYER1"
-        const val KEY_PLAYER2_EXTRA = "PLAYER2"
-    }
+    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,12 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         setUpListeners()
 
-        if(savedInstanceState != null) {
-            playerOneScore = savedInstanceState.getInt(PLAYER1_SCORE)
-            playerTwoScore = savedInstanceState.getInt(PLAYER2_SCORE)
-            setUpScorePlayerOne()
-            setUpScorePlayerTwo()
-        }
+        initViewModel()
+
+        initObserver()
 
         binding.btFinishMatch.setOnClickListener {
             val ret = Intent()
@@ -57,38 +50,42 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt(PLAYER1_SCORE, playerOneScore)
-        outState.putInt(PLAYER2_SCORE, playerTwoScore)
+    private fun initObserver() {
+
+        mainViewModel.goalHome.observe(this, Observer { goalHome ->
+            binding.tvPlayerOneScore.text = "$goalHome"
+        })
+
+        mainViewModel.goalAway.observe(this, Observer {
+            binding.tvPlayerTwoScore.text = "$it"
+        })
+
+    }
+
+    private fun initViewModel() {
+        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
     private fun setUpListeners() {
 
         //Finish Button
         binding.btFinishMatch.setOnClickListener {
-            finish()
+            mainViewModel.restart()
         }
 
         //PlayerOne Button
         binding.btPlayerOneScore.setOnClickListener {
-            playerOneScore++
-            setUpScorePlayerOne()
+            mainViewModel.goalHome()
         }
 
         //Player Two Button
         binding.btPlayerTwoScore.setOnClickListener {
-            playerTwoScore++
-            setUpScorePlayerTwo()
+            mainViewModel.goalAway()
         }
 
         //Revenge Button
         binding.btRevenge.setOnClickListener {
-            playerOneScore = 0
-            playerTwoScore = 0
-
-            setUpScorePlayerOne()
-            setUpScorePlayerTwo()
+            mainViewModel.restart()
         }
 
     }
@@ -126,6 +123,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
             }
         }
+    }
+
+    companion object {
+        const val KEY_PLAYER1_EXTRA = "PLAYER1"
+        const val KEY_PLAYER2_EXTRA = "PLAYER2"
     }
 
 }
