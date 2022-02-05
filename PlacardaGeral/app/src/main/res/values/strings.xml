@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Placar da Geral</string>
+    <string name="placar_da_geral">Placar da Geral</string>
+    <string name="comecar">COMEÇAR</string>
+    <string name="desenvolvido_por_alan_silva">Desenvolvido por Alan Silva</string>
+    <string name="comecar_a_partida">Começar a partida</string>
+    <string name="preencha_os_campos">Preencha os campos</string>
+</resources>
