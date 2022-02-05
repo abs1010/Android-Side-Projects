@@ -6,4 +6,9 @@
     <string name="ping_pong_x">Ping Pong X</string>
     <string name="casa">CASA</string>
     <string name="visitante">VISITANTE</string>
+    <string name="message_to_share">O jogo entre %1$s e %2$s terminou %3$d a %4$d</string>
+    <string name="desenvolvido_por_alan_silva">Desenvolvido por Alan Silva</string>
+    <string name="come_ar_a_partida">Começar a partida</string>
+    <string name="preencha_os_campos">Preencha os campos</string>
+    <string name="come_ar">COMEÇAR</string>
 </resources>
