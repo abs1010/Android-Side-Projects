@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlacarDaGeral">
         <activity
-            android:name=".GameType"
+            android:name=".presentation.game.GameType"
             android:exported="false" />
         <activity
-            android:name=".PlayerActivity"
+            android:name=".presentation.player.PlayerActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".presentation.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="true" />
     </application>
 

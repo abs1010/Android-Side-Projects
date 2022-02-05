@@ -1,12 +1,14 @@
-package com.alansilva.placardageral
+package com.alansilva.placardageral.presentation.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
+import com.alansilva.placardageral.R
 import com.alansilva.placardageral.databinding.ActivitySplash2Binding
+import com.alansilva.placardageral.presentation.player.PlayerActivity
 
 class SplashActivity : AppCompatActivity() {
 

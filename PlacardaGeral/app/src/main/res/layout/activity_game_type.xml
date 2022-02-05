@@ -4,13 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameType">
+    android:background="#00BCD4"
+    tools:context=".presentation.game.GameType">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="256dp"
+        android:id="@+id/btTruco"
+        android:layout_width="325dp"
+        android:layout_height="146dp"
+        android:text="Truco"
+        app:layout_constraintBottom_toTopOf="@+id/btBasket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/btSoccer"
+        android:layout_width="0dp"
         android:layout_height="143dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="91dp" />
+        android:text="Soccer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btBasket"
+        app:layout_constraintStart_toStartOf="@+id/btBasket"
+        app:layout_constraintTop_toBottomOf="@+id/btBasket" />
+
+    <Button
+        android:id="@+id/btBasket"
+        android:layout_width="0dp"
+        android:layout_height="143dp"
+        android:text="Basket"
+        app:layout_constraintBottom_toTopOf="@+id/btSoccer"
+        app:layout_constraintEnd_toEndOf="@+id/btTruco"
+        app:layout_constraintStart_toStartOf="@+id/btTruco"
+        app:layout_constraintTop_toBottomOf="@+id/btTruco" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="O que deseja jogar?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
