@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlacarDaGeral">
         <activity
+            android:name=".GameType"
+            android:exported="false" />
+        <activity
             android:name=".PlayerActivity"
             android:exported="false" />
         <activity

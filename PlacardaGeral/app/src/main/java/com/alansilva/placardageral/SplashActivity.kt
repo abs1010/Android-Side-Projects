@@ -30,7 +30,7 @@ class SplashActivity : AppCompatActivity() {
             val nextScreen = Intent(this, PlayerActivity::class.java)
             startActivity(nextScreen)
             finish()
-        }, 2000)
+        }, 1800)
     }
 
     private fun initAnimation() {
