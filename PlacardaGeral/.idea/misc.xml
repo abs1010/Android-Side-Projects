@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_basket_score.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/activity_football_score.xml" value="0.30600973050041164" />
         <entry key="app/src/main/res/layout/activity_game_type.xml" value="0.40206298828125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
         <entry key="app/src/main/res/layout/activity_player.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash2.xml" value="0.33863671344259494" />
+        <entry key="app/src/main/res/layout/activity_truco_score.xml" value="0.1" />
       </map>
     </option>
   </component>

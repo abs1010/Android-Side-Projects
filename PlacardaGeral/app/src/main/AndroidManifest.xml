@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlacarDaGeral">
         <activity
+            android:name=".presentation.game.types.FootballScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.game.types.BasketScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.game.types.TrucoScoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.game.GameType"
             android:exported="false" />
         <activity
