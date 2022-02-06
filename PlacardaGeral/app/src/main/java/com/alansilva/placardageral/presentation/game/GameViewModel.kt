@@ -12,12 +12,12 @@ class GameViewModel : ViewModel() {
         startGame()
     }
 
-    fun goalHome() {
-        goalHome.value = goalHome.value?.plus(1)
+    fun goalHome(points: Int = 1) {
+        goalHome.value = goalHome.value?.plus(points)
     }
 
-    fun goalAway() {
-        goalAway.value = goalAway.value?.plus(1)
+    fun goalAway(points: Int = 1) {
+        goalAway.value = goalAway.value?.plus(points)
     }
 
     fun restart() {

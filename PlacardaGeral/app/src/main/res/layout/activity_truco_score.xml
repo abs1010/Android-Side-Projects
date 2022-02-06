@@ -17,16 +17,16 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/btPlayerTwoScore"
+            android:id="@+id/btPlayerTwoScore3pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
-            app:layout_constraintBottom_toBottomOf="@+id/btPlayerOneScore"
+            app:layout_constraintBottom_toBottomOf="@+id/btPlayerOneScore3bt"
             app:layout_constraintEnd_toEndOf="@+id/tvPlayerTwoScore"
             app:layout_constraintStart_toStartOf="@+id/tvPlayerTwoScore" />
 
         <Button
-            android:id="@+id/btPlayerOneScore"
+            android:id="@+id/btPlayerOneScore3bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
@@ -41,9 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/terminar_a_partida"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerTwoScore"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore" />
+            app:layout_constraintEnd_toEndOf="@+id/btPlayerTwoScore3pt"
+            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore3bt"
+            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt" />
 
         <Button
             android:id="@+id/btRevenge"

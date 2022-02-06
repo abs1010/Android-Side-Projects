@@ -15,13 +15,12 @@ class TrucoScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setUpBinding()
-
         setUpListeners()
 
     }
 
     private fun setUpBinding() {
-        binding = ActivityTrucoScoreBinding.inflate(layoutInflater)
+        binding = ActivityTrucoScoreBinding .inflate(layoutInflater)
         setContentView(binding.root)
     }
 
@@ -39,14 +38,14 @@ class TrucoScoreActivity : AppCompatActivity() {
         }
 
         //PlayerOne Button
-        binding.btPlayerOneScore.setOnClickListener {
+        //binding.btPlayerOneScore.setOnClickListener {
            // mainViewModel.goalHome()
-        }
+        //}
 
         //Player Two Button
-        binding.btPlayerTwoScore.setOnClickListener {
+        //binding.btPlayerTwoScore.setOnClickListener {
             //mainViewModel.goalAway()
-        }
+       // }
 
         //Revenge Button
         binding.btRevenge.setOnClickListener {
