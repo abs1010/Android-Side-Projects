@@ -8,6 +8,8 @@ import android.os.Bundle
 import com.alansilva.placardageral.databinding.ActivityFootballScoreBinding
 import com.alansilva.placardageral.presentation.game.GameViewModel
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.alansilva.placardageral.R
 
 class FootballScoreActivity : AppCompatActivity() {
 
@@ -18,9 +20,9 @@ class FootballScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setUpBinding()
-
         setUpListeners()
-
+        initViewModel()
+        initObserver()
     }
 
     private fun setUpBinding() {
@@ -28,17 +30,36 @@ class FootballScoreActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
+    // SETUP OBSERVERS
+    private fun initObserver() {
+
+        vewModel.goalHome.observe(this, Observer { goalHome ->
+            binding.tvPlayerOneScore.text = "$goalHome"
+        })
+
+        vewModel.goalAway.observe(this, Observer {
+            binding.tvPlayerTwoScore.text = "$it"
+        })
+
+    }
+
+    // INIT VIEW MODEL
+    private fun initViewModel() {
+        vewModel = ViewModelProvider(this).get(GameViewModel::class.java)
+    }
+
     // SETUP LISTENERS
     private fun setUpListeners() {
 
         //WhatsApp Button
-        binding.btShareWhatsApp?.setOnClickListener {
+        binding.btShareWhatsApp.setOnClickListener {
             shareWhatsApp()
         }
 
         //Finish Button
         binding.btFinishMatch.setOnClickListener {
             vewModel.restart()
+            finish()
         }
 
         //PlayerOne Button
@@ -64,7 +85,8 @@ class FootballScoreActivity : AppCompatActivity() {
             val whatsAppIntent = Intent(Intent.ACTION_SEND)
             whatsAppIntent.type = "text/plain"
             whatsAppIntent.setPackage("com.whatsapp")
-            val message = getString(1,
+            val message = getString(
+                R.string.message_to_share,
                 binding.tvPlayerOneName.text,
                 binding.tvPlayerTwoName.text,
                 binding.tvPlayerOneScore.text.toString().toInt(),
