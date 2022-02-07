@@ -1,8 +1,10 @@
 package com.alansilva.placardageral.presentation.game.types
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.alansilva.placardageral.R
@@ -128,7 +130,37 @@ class TrucoScoreActivity : AppCompatActivity() {
 
     // CALL WHATSAPP APPLICATION
     private fun shareWhatsApp() {
-        Toast.makeText(this, "WhatsApp não instalado", Toast.LENGTH_LONG).show()
+        try {
+            val whatsAppIntent = Intent(Intent.ACTION_SEND)
+            whatsAppIntent.type = "text/plain"
+            whatsAppIntent.setPackage("com.whatsapp")
+            val message = getString(
+                R.string.message_to_share,
+                binding.tvPlayerOneName.text,
+                binding.tvPlayerTwoName.text,
+                binding.playerOnePlacar.text.toString().toInt(),
+                binding.playerTwoPlacar.text.toString().toInt()
+            )
+            whatsAppIntent.putExtra(Intent.EXTRA_TEXT, message)
+            startActivity(whatsAppIntent)
+        } catch (e: ActivityNotFoundException) {
+            val appPackageName = "com.whatsapp"
+            try {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("market://details?id=$appPackageName")
+                    )
+                )
+            } catch (anfe: android.content.ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")
+                    )
+                )
+            }
+        }
     }
 
 }

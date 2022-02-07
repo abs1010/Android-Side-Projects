@@ -2,6 +2,7 @@ package com.alansilva.placardageral.presentation.player
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.alansilva.placardageral.R
 import com.alansilva.placardageral.databinding.ActivityPlayerBinding
@@ -29,8 +30,12 @@ class PlayerActivity : AppCompatActivity() {
 
             //nextScreen.putExtra(MainActivity.KEY_PLAYER1_EXTRA, binding.etPlayer1.text.toString())
             //nextScreen.putExtra(MainActivity.KEY_PLAYER2_EXTRA, binding.etPlayer2.text.toString())
-
-            startActivity(nextScreen)
+            if (binding.etPlayer1.text.isBlank()  || binding.etPlayer2.text.isBlank() )  {
+                Toast.makeText(this, "Por favor preencha os nomes dos jogadores", Toast.LENGTH_LONG)
+                    .show()
+            } else {
+                startActivity(nextScreen)
+            }
         }
 
     }

@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.alansilva.placardageral.R
 import com.alansilva.placardageral.databinding.ActivityBasketScoreBinding
-import com.alansilva.placardageral.databinding.ActivityFootballScoreBinding
 import com.alansilva.placardageral.presentation.game.GameViewModel
 
 class BasketScoreActivity : AppCompatActivity() {
