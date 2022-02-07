@@ -14,115 +14,115 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btPTwoPlus12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 12"
-            app:layout_constraintEnd_toEndOf="@+id/button4"
-            app:layout_constraintStart_toStartOf="@+id/button4"
-            app:layout_constraintTop_toBottomOf="@+id/button4" />
+            app:layout_constraintEnd_toEndOf="@+id/btPTwoPlus9"
+            app:layout_constraintStart_toStartOf="@+id/btPTwoPlus9"
+            app:layout_constraintTop_toBottomOf="@+id/btPTwoPlus9" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btPTwoPlus9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 9"
-            app:layout_constraintBottom_toTopOf="@+id/button5"
-            app:layout_constraintEnd_toEndOf="@+id/button3"
-            app:layout_constraintStart_toStartOf="@+id/button3"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
+            app:layout_constraintBottom_toTopOf="@+id/btPTwoPlus12"
+            app:layout_constraintEnd_toEndOf="@+id/btPTwoPlus6"
+            app:layout_constraintStart_toStartOf="@+id/btPTwoPlus6"
+            app:layout_constraintTop_toBottomOf="@+id/btPTwoPlus6" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btPTwoPlus6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 6"
-            app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintEnd_toEndOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintBottom_toTopOf="@+id/btPTwoPlus9"
+            app:layout_constraintEnd_toEndOf="@+id/btPTwoPlus3"
+            app:layout_constraintStart_toStartOf="@+id/btPTwoPlus3"
+            app:layout_constraintTop_toBottomOf="@+id/btPTwoPlus3" />
 
         <Button
-            android:id="@+id/btPlayerOneScore3bt7"
+            android:id="@+id/btPOnePlus9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 9"
-            app:layout_constraintBottom_toTopOf="@+id/btPlayerOneScore3bt8"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerOneScore3bt6"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore3bt6"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt6" />
+            app:layout_constraintBottom_toTopOf="@+id/btPOnePlus12"
+            app:layout_constraintEnd_toEndOf="@+id/btPOnePlus6"
+            app:layout_constraintStart_toStartOf="@+id/btPOnePlus6"
+            app:layout_constraintTop_toBottomOf="@+id/btPOnePlus6" />
 
         <Button
-            android:id="@+id/btPlayerOneScore3bt8"
+            android:id="@+id/btPOnePlus12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 12"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerOneScore3bt7"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore3bt7"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt7" />
+            app:layout_constraintEnd_toEndOf="@+id/btPOnePlus9"
+            app:layout_constraintStart_toStartOf="@+id/btPOnePlus9"
+            app:layout_constraintTop_toBottomOf="@+id/btPOnePlus9" />
 
         <Button
-            android:id="@+id/btPlayerOneScore3bt5"
+            android:id="@+id/btPOnePlus3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 3"
-            app:layout_constraintBottom_toTopOf="@+id/btPlayerOneScore3bt6"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerOneScore3bt4"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore3bt4"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt4" />
+            app:layout_constraintBottom_toTopOf="@+id/btPOnePlus6"
+            app:layout_constraintEnd_toEndOf="@+id/btPOnePlus1"
+            app:layout_constraintStart_toStartOf="@+id/btPOnePlus1"
+            app:layout_constraintTop_toBottomOf="@+id/btPOnePlus1" />
 
         <Button
-            android:id="@+id/btPlayerOneScore3bt6"
+            android:id="@+id/btPOnePlus6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 6"
-            app:layout_constraintBottom_toTopOf="@+id/btPlayerOneScore3bt7"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerOneScore3bt5"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore3bt5"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt5" />
+            app:layout_constraintBottom_toTopOf="@+id/btPOnePlus9"
+            app:layout_constraintEnd_toEndOf="@+id/btPOnePlus3"
+            app:layout_constraintStart_toStartOf="@+id/btPOnePlus3"
+            app:layout_constraintTop_toBottomOf="@+id/btPOnePlus3" />
 
         <Button
-            android:id="@+id/btPlayerTwoScore3pt"
+            android:id="@+id/btPTwoMinus1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#E40808"
             android:text="- 1"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="@+id/tvPlayerTwoScore"
-            app:layout_constraintStart_toStartOf="@+id/tvPlayerTwoScore"
+            app:layout_constraintBottom_toTopOf="@+id/btPTwoPlus1"
+            app:layout_constraintEnd_toEndOf="@+id/playerTwoPlacar"
+            app:layout_constraintStart_toStartOf="@+id/playerTwoPlacar"
             app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoName"
             app:layout_constraintVertical_chainStyle="spread" />
 
         <Button
-            android:id="@+id/btPlayerOneScore3bt"
+            android:id="@+id/btPOneMinus1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#E40808"
             android:text="-1"
-            app:layout_constraintBottom_toTopOf="@+id/btPlayerOneScore3bt4"
-            app:layout_constraintEnd_toEndOf="@+id/tvPlayerOneScore"
+            app:layout_constraintBottom_toTopOf="@+id/btPOnePlus1"
+            app:layout_constraintEnd_toEndOf="@+id/playerOnePlacar"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tvPlayerOneScore"
+            app:layout_constraintStart_toStartOf="@+id/playerOnePlacar"
             app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneName"
             app:layout_constraintVertical_chainStyle="spread" />
 
         <Button
-            android:id="@+id/btPlayerOneScore3bt4"
+            android:id="@+id/btPOnePlus1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 1"
-            app:layout_constraintBottom_toTopOf="@+id/btPlayerOneScore3bt5"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerOneScore3bt"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerOneScore3bt"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt" />
+            app:layout_constraintBottom_toTopOf="@+id/btPOnePlus3"
+            app:layout_constraintEnd_toEndOf="@+id/btPOneMinus1"
+            app:layout_constraintStart_toStartOf="@+id/btPOneMinus1"
+            app:layout_constraintTop_toBottomOf="@+id/btPOneMinus1" />
 
         <Button
             android:id="@+id/btFinishMatch"
@@ -130,9 +130,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/terminar_a_partida"
-            app:layout_constraintEnd_toEndOf="@+id/tvPlayerTwoScore"
-            app:layout_constraintStart_toStartOf="@+id/tvPlayerOneScore"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerOneScore3bt8" />
+            app:layout_constraintEnd_toEndOf="@+id/playerTwoPlacar"
+            app:layout_constraintStart_toStartOf="@+id/playerOnePlacar"
+            app:layout_constraintTop_toBottomOf="@+id/btPOnePlus12" />
 
         <Button
             android:id="@+id/btRevenge"
@@ -179,10 +179,10 @@
             android:layout_marginTop="16dp"
             android:text="@string/casa"
             android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@+id/tvPlayerOneScore"
+            app:layout_constraintEnd_toEndOf="@+id/playerOnePlacar"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tvPlayerOneScore"
-            app:layout_constraintTop_toBottomOf="@+id/tvPlayerOneScore" />
+            app:layout_constraintStart_toStartOf="@+id/playerOnePlacar"
+            app:layout_constraintTop_toBottomOf="@+id/playerOnePlacar" />
 
         <TextView
             android:id="@+id/tvPlayerTwoName"
@@ -191,13 +191,13 @@
             android:layout_marginTop="16dp"
             android:text="@string/visitante"
             android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@+id/tvPlayerTwoScore"
+            app:layout_constraintEnd_toEndOf="@+id/playerTwoPlacar"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tvPlayerTwoScore"
-            app:layout_constraintTop_toBottomOf="@+id/tvPlayerTwoScore" />
+            app:layout_constraintStart_toStartOf="@+id/playerTwoPlacar"
+            app:layout_constraintTop_toBottomOf="@+id/playerTwoPlacar" />
 
         <TextView
-            android:id="@+id/tvPlayerOneScore"
+            android:id="@+id/playerOnePlacar"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -218,13 +218,13 @@
             android:text="X"
             android:textAlignment="center"
             android:textSize="72sp"
-            app:layout_constraintEnd_toStartOf="@+id/tvPlayerTwoScore"
+            app:layout_constraintEnd_toStartOf="@+id/playerTwoPlacar"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tvPlayerOneScore"
+            app:layout_constraintStart_toEndOf="@+id/playerOnePlacar"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/tvPlayerTwoScore"
+            android:id="@+id/playerTwoPlacar"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -237,26 +237,26 @@
             app:layout_constraintTop_toTopOf="@+id/textView7" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btPTwoPlus1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 1"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="@+id/btPlayerTwoScore3pt"
-            app:layout_constraintStart_toStartOf="@+id/btPlayerTwoScore3pt"
-            app:layout_constraintTop_toBottomOf="@+id/btPlayerTwoScore3pt" />
+            app:layout_constraintBottom_toTopOf="@+id/btPTwoPlus3"
+            app:layout_constraintEnd_toEndOf="@+id/btPTwoMinus1"
+            app:layout_constraintStart_toStartOf="@+id/btPTwoMinus1"
+            app:layout_constraintTop_toBottomOf="@+id/btPTwoMinus1" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btPTwoPlus3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#8BC34A"
             android:text="+ 3"
-            app:layout_constraintBottom_toTopOf="@+id/button3"
-            app:layout_constraintEnd_toEndOf="@+id/button"
-            app:layout_constraintStart_toStartOf="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintBottom_toTopOf="@+id/btPTwoPlus6"
+            app:layout_constraintEnd_toEndOf="@+id/btPTwoPlus1"
+            app:layout_constraintStart_toStartOf="@+id/btPTwoPlus1"
+            app:layout_constraintTop_toBottomOf="@+id/btPTwoPlus1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
