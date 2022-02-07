@@ -2,7 +2,9 @@ package com.alansilva.placardageral.presentation.game.types
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.alansilva.placardageral.R
 import com.alansilva.placardageral.databinding.ActivityTrucoScoreBinding
 import com.alansilva.placardageral.presentation.game.GameViewModel
@@ -16,14 +18,19 @@ class TrucoScoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setUpBinding()
+        initViewModel()
+        initObserver()
         setUpListeners()
-        //initObserver()
-
     }
 
     private fun setUpBinding() {
         binding = ActivityTrucoScoreBinding .inflate(layoutInflater)
         setContentView(binding.root)
+    }
+
+    // INIT VIEW MODEL
+    private fun initViewModel() {
+        vewModel = ViewModelProvider(this).get(GameViewModel::class.java)
     }
 
     // SETUP OBSERVERS
@@ -121,7 +128,7 @@ class TrucoScoreActivity : AppCompatActivity() {
 
     // CALL WHATSAPP APPLICATION
     private fun shareWhatsApp() {
-
+        Toast.makeText(this, "WhatsApp não instalado", Toast.LENGTH_LONG).show()
     }
 
 }
