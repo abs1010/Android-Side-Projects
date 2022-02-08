@@ -33,6 +33,9 @@ class LoginActivity : AppCompatActivity() {
         initListener()
         initViewModel()
         initObserver()
+
+        loginViewModel.getLoggerUser()
+
     }
 
     private fun initObserver() {
@@ -57,6 +60,18 @@ class LoginActivity : AppCompatActivity() {
                 }
 
             }
+        })
+
+
+        loginViewModel.loggedUserState.observe(this, {
+
+            when(it) {
+                is RequestState.Success -> {
+                    binding.etEmail.setText(it.data)
+                }
+                else -> {}
+            }
+
         })
 
     }
