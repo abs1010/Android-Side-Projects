@@ -16,7 +16,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class ListPokemonsActivity : AppCompatActivity(R.layout.activity_list_pokemons) {
     private val listPokemonsViewModel: ListPokemonsViewModel by viewModel()
-    val picasso: Picasso by inject()
+    private val picasso: Picasso by inject()
     private val viewBinding by lazy {
         ActivityListPokemonsBinding.inflate(layoutInflater)
     }
@@ -28,7 +28,7 @@ class ListPokemonsActivity : AppCompatActivity(R.layout.activity_list_pokemons) 
         registerObserver()
     }
 
-    fun registerObserver() {
+    private fun registerObserver() {
 
         listPokemonsViewModel.pokemonResult.observe(this) {
             when (it) {
