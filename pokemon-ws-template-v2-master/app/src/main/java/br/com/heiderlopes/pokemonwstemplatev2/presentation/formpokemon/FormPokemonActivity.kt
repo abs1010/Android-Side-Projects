@@ -42,18 +42,20 @@ class FormPokemonActivity : AppCompatActivity() {
 
     fun registerObserver() {
 
-//        formPokemonViewModel.pokemonResult.observe(this, {
-//        when(it) {
-//            is ViewState.Success -> {
-//                setValues(it.data) }
-//            is ViewState.Loading -> {
-//            }
-//            is ViewState.Failure -> {
-//                Toast.makeText(this, it.throwable.message, Toast.LENGTH_LONG).show()
-//            } }
-//    })
+        formPokemonViewModel.pokemonResult.observe(this) {
+            when (it) {
+                is ViewState.Success -> {
+                    setValues(it.data)
+                }
+                is ViewState.Loading -> {
+                }
+                is ViewState.Failure -> {
+                    Toast.makeText(this, it.throwable.message, Toast.LENGTH_LONG).show()
+                }
+            }
+        }
 
-        formPokemonViewModel.pokemonUpdateResult.observe(this, {
+        formPokemonViewModel.pokemonUpdateResult.observe(this) {
 
             when (it) {
                 is ViewState.Success -> {
@@ -65,7 +67,7 @@ class FormPokemonActivity : AppCompatActivity() {
                     Toast.makeText(this, it.throwable.message, Toast.LENGTH_LONG).show()
                 }
             }
-        })
+        }
 
     }
 

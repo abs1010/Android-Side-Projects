@@ -30,6 +30,7 @@ class PokedexActivity : AppCompatActivity() {
 
         val pokemonNumber = intent.getStringExtra("POKEMON") ?: ""
         pokedexViewModel.getPokemon(pokemonNumber)
+
     }
 
     private fun registerObserver() {
