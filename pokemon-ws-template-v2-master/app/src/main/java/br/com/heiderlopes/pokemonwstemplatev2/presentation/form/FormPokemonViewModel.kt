@@ -43,7 +43,8 @@ class FormPokemonViewModel(
                                 0,
                                 0,
                                 0,
-                                0
+                                0,
+                                description = ""
                             )
                         )
                     )
@@ -72,7 +73,7 @@ class FormPokemonViewModel(
                                 0,
                                 0,
                                 0,
-                                0
+                                0, ""
                             )
                         )
                     ))

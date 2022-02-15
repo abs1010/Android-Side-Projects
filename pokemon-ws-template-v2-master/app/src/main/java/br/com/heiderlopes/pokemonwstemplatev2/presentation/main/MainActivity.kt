@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.heiderlopes.pokemonwstemplatev2.databinding.ActivityMainBinding
 import br.com.heiderlopes.pokemonwstemplatev2.presentation.listpokemons.ListPokemonsActivity
+import br.com.heiderlopes.pokemonwstemplatev2.presentation.scan.ScanActivity
 
 class MainActivity : AppCompatActivity() {
     private val viewBinding by lazy {
@@ -17,9 +18,10 @@ class MainActivity : AppCompatActivity() {
         setUpListeners()
     }
 
-    private fun setUpListeners() {
-        viewBinding.btPokemonList.setOnClickListener {
-            startActivity(Intent(this, ListPokemonsActivity::class.java))
+    private fun setUpListeners() { viewBinding.btPokemonList.setOnClickListener {
+        startActivity(Intent(this, ListPokemonsActivity::class.java)) }
+        viewBinding.btPokedex.setOnClickListener {
+            startActivity(Intent(this, ScanActivity::class.java))
         }
     }
 }

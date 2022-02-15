@@ -7,5 +7,6 @@ data class Pokemon(
     var ps: Int,
     var attack: Int,
     var defense: Int,
-    var velocity: Int
+    var velocity: Int,
+    var description: String
 )

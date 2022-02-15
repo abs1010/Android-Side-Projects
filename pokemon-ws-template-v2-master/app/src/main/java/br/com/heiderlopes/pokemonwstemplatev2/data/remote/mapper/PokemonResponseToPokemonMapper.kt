@@ -15,6 +15,7 @@ class PokemonResponseToPokemonMapper : Mapper<PokemonResponse, Pokemon> {
             attack = source.attack,
             defense = source.defense,
             velocity = source.velocity,
+            description = source.description
         )
     }
 }
