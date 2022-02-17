@@ -43,7 +43,6 @@ class Game(playerOne: String, playerTwo: String) {
         cells = Array(BOARD_SIZE) { arrayOfNulls<Cell>(BOARD_SIZE) }
     }
 
-
     private fun areEqual(vararg cells: Cell?): Boolean {
 
         for (cell in cells) if (cell?.player?.value == null)
@@ -68,5 +67,46 @@ class Game(playerOne: String, playerTwo: String) {
             Log.e(TAG, e.message!!)
             return false
         }
+    }
+
+    fun hasThreeSameVerticalCells(): Boolean {
+        return try {
+            for (i in 0 until BOARD_SIZE) if (areEqual(
+                    cells[0][i], cells[1][i], cells[2][i]
+                )
+            ) return true
+            false
+        } catch (e: java.lang.NullPointerException) {
+            Log.e(TAG, e.message!!)
+            false
+        }
+    }
+
+    fun hasThreeSameDiagonalCells(): Boolean {
+        return try {
+            (areEqual(cells[0][0], cells[1][1], cells[2][2]) ||
+                    areEqual(
+                        cells[0][2],
+                        cells[1][1],
+                        cells[2][0]
+                    ))
+        } catch (e: NullPointerException) {
+            Log.e(TAG, e.message!!)
+            false
+        }
+    }
+
+    fun hasGameEnded(): Boolean {
+        if (hasThreeSameHorizontalCells() || hasThreeSameVerticalCells() || hasThreeSameDiagonalCells()) {
+            winner.value = currentPlayer
+            return true
+        }
+
+        if (isBoardFull) {
+            winner.value = null
+            return true
+        }
+
+        return false
     }
 }

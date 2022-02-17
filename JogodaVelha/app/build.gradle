@@ -42,7 +42,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Biblioteca Assistente para outras dependências
-    //incluindo regras de teste do JUnit que podem ser usadas com o LiveData. testImplementation "androidx.arch.core:core-testing:2.1.0"
+    //incluindo regras de teste do JUnit que podem ser usadas com o LiveData. test
+    implementation "androidx.arch.core:core-testing:2.1.0"
     //Biblioteca AAC
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     //Componentes da biblioteca de design
