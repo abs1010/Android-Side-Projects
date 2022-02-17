@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -14,6 +15,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
     }
 
     buildTypes {
@@ -48,9 +53,17 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     //Componentes da biblioteca de design
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    //Biblioteca para teste de interface
-    androidTestImplementation("com.schibsted.spain:barista:2.9.0") {
+
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+
+    androidTestImplementation('com.adevinta.android:barista:4.2.0') {
+        //exclude group: 'org.jetbrains.kotlin' // Only if you already use Kotlin in your project
         exclude group: 'com.android.support', module: 'support-annotations'
     }
+
+    //Biblioteca para teste de interface
+//    androidTestImplementation("com.schibsted.spain:barista:4.2.0") {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    }
 
 }

@@ -32,6 +32,14 @@ class Game(playerOne: String, playerTwo: String) {
         currentPlayer = player1
     }
 
+    // método para setar o jogadores que serão preenchidos pelo dialog
+    fun onPlayersSet(player1: String, player2: String) {
+    }
+
+    // Exibe o dialog solicitando o nome dos jogadores
+    fun promptForPlayers() {
+    }
+
     fun switchPlayer() {
         currentPlayer = if (currentPlayer === player1) player2 else player1
     }
