@@ -65,7 +65,7 @@ dependencies {
     implementation dependencies.rxAndroid
 
     implementation dependencies.material
-
+    implementation dependencies.picasso
 
     kapt dependencies.dataBinding
 
